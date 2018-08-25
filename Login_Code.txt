@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+
+<html>
+
+    <head id="Head1">
+	
+		<meta charset="utf-8" />
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<meta name="Favicon" content="images/Favicon.png" size=16*16>
+		
+		<title>	Funbawarchi </title>
+		
+		<!-- Common Css -->
+		<link href="CSS/login.css" type="text/css" rel="stylesheet"  />
+		
+		<!-- Sliding Header Css -->
+		<link href="CSS/animate_min.css" rel="stylesheet" media="screen">
+		
+		<!-- Front End View -->
+		<link href="CSS/foundation_min.css" rel="stylesheet" type="text/css" />	
+		
+		<!-- Create Account Pop Up Css -->
+		<link href="CSS/create_account.css" rel="stylesheet" type="text/css" />	
+		
+		
+		
+	</head>
+
+		<body>
+
+		<!--*****  Logo Coding Start  *****-->
+
+			<div class="top-bar animated fadeInDown animation-delay-5">
+
+				<img src="images/logo.jpg" alt="logo" class="logo" style= "top:0"/>
+
+			</div>
+
+		<!--*****  Logo Coding End  *****-->
+
+
+		<!--*****  Create Account Coding Start  *****-->
+
+			<div class="top-bar_login animated fadeInDown  animation-delay-100 " style="text-color:white">
+
+				 <a data-reveal-id="thirdModal"><img class="fadeInDown" src="images/create_icon.png" style="height:17px; width:17px;" />CREATEACCOUNT</a>
+
+			</div>
+
+		
+		<!--*****  Sign In POP UP (with Create Account Button) Start  *****-->
+
+			<div id="firstModal" class="reveal-modal rcart" data-reveal>
+
+				<div class="row collapse sign-in">
+
+					<h2>SIGN IN</h2>
+
+					<a class="close-reveal-modal small"><img src="images/close.png" alt="close" /></a>
+
+					<div class="column large-3 small-3 sign-in ed" style="width:100% !important; padding:15px 15px 10px 35px;">
+
+						<div class="cust">
+
+							<label><a data-reveal-id="thirdModal" href="#"> &nbsp;<span class="sign_sm_txt">I'm a new customer</span></a></label>
+
+						</div>
+
+						<form data-abide action="#"  method="post">
+
+							<div class="ed">
+
+								<input type="text" pattern="email" style="width:96%;"  name="login_email" class="form-control"  id="log_email"  value="" required placeholder="E-mail" tabindex="1" />
+
+								<small class="error" style="width:96%;">Enter valid Email ID format</small>
+
+							</div>
+
+							<div class="ed">
+
+								<input type="password"  style="width:96%;" tabindex="2"  name="login_password" class="form-control" id="inpass" placeholder="Password"  onKeyPress="return submitenter(this,event)" required />
+
+								<input type="hidden" name="prev_page" value="#" />
+
+								<small class="error" style="width:96%;">Required</small>
+
+							</div>
+
+							<input type="hidden" name="url" value="-1" />
+
+							<span class="sign_btn"><input type="submit" value="Submit" style="color:#fff; background:none; border:none; outline:none;"/></span>
+
+							<span class="pwddf"><a data-reveal-id="secondModal" href="#" style="color:#580417;">Forgot Password?</a></span>
+
+							<br/>
+
+						</form>
+
+						<div class="or">
+
+							<img src="images/or.jpg" alt="or"/>
+
+						</div>
+
+						<div class="sign-social">
+
+							<a><img src="images/sign-fb.jpg" alt="social-icons" onClick="checkFBLogin();"/></a>
+
+							<a><img src="images/sign-gplus.jpg" alt="social-icons"  onClick="checkGoogleLogin()"/></a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		<!--*****  Sign In POP UP (with Create Account Button) End  *****-->
+
+
+		<!--*****  Forgot Password POP UP (with Create Account Button) Start  *****-->
+
+			<div id="secondModal" class="reveal-modal rcart" data-reveal>
+
+				<div class="row collapse sign-in">
+
+					<h2>RESET MY PASSWORD</h2>
+
+					<a class="close-reveal-modal"><img src="images/close.png" alt="close" /></a>
+
+					<div class="column large-3 small-3 sign-in" style="width:100% !important; padding:15px 15px 35px 35px;">
+
+						<span style="color:#670E19;"> A reset password link will be sent on your registered email id</span><br/><br/>
+
+						<form data-abide action="#"  method="post">
+
+							<div class="ed">
+
+								<input type="text" style="width:93%;"  name="fp_email" class="form-control"  id="fp_email"  value="" pattern="email" required placeholder="E-mail" />
+
+								<small class="error" style="width:93%;">Enter the valid Email ID</small>
+
+							</div>
+
+							<input type="hidden" name="url" value="-1" />
+
+							<input type="submit" value="Submit" style="" class="dd" aria-invalid="false">
+						</form>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		<!--*****  Forgot Password POP UP (with Create Account Button) End  *****-->
+
+
+		<!--*****  Reset Password POP UP (with Create Account Button) End  *****-->
+
+			<div id="twoModal" class="reveal-modal rcart" data-reveal>
+
+				<div class="row collapse sign-in">
+
+					<h2>NEW PASSWORD</h2>
+
+					<a class="close-reveal-modal"><img src="images/close.png" alt="close" /></a>
+
+
+					<div class="column large-3 small-3 sign-in" style="width:100% !important; padding:15px 15px 35px 35px;">
+
+						<span class="sign_sm_txt">Provide your new password for your account</span><br/><br/>
+
+						<form data-abide action="#"  method="post">
+
+							<div class="ed">
+
+								<input type="password" style="width:93%; "  name="password" class="form-control"  id="fp_pass"  required pattern="passwd" placeholder="New Password" />
+
+								<small class="error" style="width:93%;">Minimum 6 characters required</small>
+
+							</div>
+
+							<div class="ed">
+
+								<input type="password" style="width:93%;"  name="cpassword" class="form-control"  id="fp_pass1"   required placeholder="Confirm New Password" data-equalto="fp_pass" />
+
+								<small class="error" style="width:93%;">Minimum 6 characters required</small>
+
+							</div>
+
+							<input type="hidden" name="s" id="f_p_s" value="" />
+
+							<div>
+
+								<input type="submit" value="Submit" style="" class="dd"/>
+
+							</div>
+
+						</form>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		<!--*****  Reset Password POP UP (with Create Account Button) End  *****-->
+
+
+		<!--*****  signup POP UP (with Create Account Button) Start  *****-->
+
+			<div id="thirdModal" class="reveal-modal rcart" data-reveal>
+
+				<div class="row collapse sign-in">
+
+					<h2>SIGN UP</h2>
+
+					<a class="close-reveal-modal"><img src="images/close.png" alt="close" /></a>
+
+					<div class="column large-3 small-3 sign-in" style="width:100% !important; padding:15px 15px 10px 35px;">
+
+						<a  data-reveal-id="firstModal" ><span class="sign_sm_txt" id="firstModal">Yes, I have a account.</span></a>
+
+						<br></br>
+
+						<form data-abide action="#"  method="post">
+
+							<div class="ed">
+
+							  <input type="text"  style="width:93%; "  name="user_name"  placeholder="Enter your full name" class="form-control" id="inpass"  required  />
+
+							  <small class="error" style="width:93%;">Required</small>
+
+							</div>
+
+							<div class="ed">
+
+							   <input type="text" style="width:93%;"  name="user_email" class="form-control"  placeholder="Enter your email address" data-abide-validator="ajax" data-page="ajax/check_email_exists.php" id="log_email"  required pattern="email" />
+
+								<small class="error" style="width:93%;">Required</small>
+
+							</div>
+
+							<div class="ed">
+
+								<input type="text"  style="width:93%; "  name="user_mobile"  placeholder="Enter your 10 digit mobile number" class="form-control" id="inpass"  required pattern="mobile_no"   maxlength="10"/>
+
+								<small class="error" style="width:93%;">Required</small>
+
+							</div>
+
+							 <div class="ed">
+
+								<input type="password"  style="width:93%; "  name="user_password"  placeholder="Enter your Password" class="form-control"  required id="user_pass" pattern="passwd"  />
+
+								<small class="error" style="width:93%;">Minimum 6 characters required</small>
+
+							</div>
+
+							<div class="ed">
+
+								<input type="password"  style="width:93%;"  name="user_cpassword"  placeholder="Re-enter your Password" class="form-control" required id="user_cpass" data-equalto="user_pass" />
+								<small class="error" style="width:93%;">Password Mismatch</small>
+
+							</div>
+
+							<div class="sign_up_btm">
+
+								<input type="submit" value="CREATE ACCOUNT" style="" class="dd"/>
+
+							</div>
+
+						</form>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		<!--*****  signup POP UP (with Create Account Button) End  *****-->
+		
+		<script src='js/jquery.js'></script>
+		<script src="js/foundation_min.js"></script>
+		<script src="js/functions.js"></script>
+		
+		<!--*****  Create Account Coding End  *****-->
+		
+		
+		<!--*****  Login Window Coding Start  *****-->
+		
+			<div id="LoginControl" class="js-login-wrapper login-wrapper" >
+			
+				<div class="md-overlay"></div>
+			
+				<div class="modal" style="width:100%" >
+
+					<ol class="clearfix">
+
+						<li STYLE= "color:blue;height:100%;font-family:helvetica, arial, sans-serif;font:bold">
+						<img src="images/Sign_In.png" style="height:25px; width:25px;> LOGIN </li>
+				
+						<li <img src="images/Sign_In.png" style="height:17px; width:17px; color:blue;height:100%;font-family:helvetica, arial, sans-serif;font:bold" > <b> LOGIN </b></li>
+
+						<li>
+							<h2 class="text--error"></h2>
+							
+							<div id="LoginControl_ValidationSummary1" class="text--error" style="display:none;"></div>
+							
+						</li>
+						
+						<li>
+							<label for="UserName">Enter E-mail  /  Mobile Number</label>
+							
+							<input name="LoginControl$UserName" type="text" id="LoginControl_UserName" />
+							
+							<span id="LoginControl_RequiredFieldValidator1" style="display:none;">­</span>
+							
+						</li>
+						
+						<li>
+							<label for="Password">Password</label>
+							
+							<input name="LoginControl$Password" type="password" id="LoginControl_Password" />
+							
+							<span id="LoginControl_RequiredFieldValidator2" style="display:none;">­</span>
+							
+						</li>
+						
+						<li>
+							<label for="RememberMe">
+							
+								<span class="epi-checkbox"><input id="LoginControl_RememberMe" type="checkbox" name="LoginControl$RememberMe" /></span>
+								Enable automatic logon to this website
+								
+							</label>
+						</li>
+						
+						<li>
+						
+						 <a href="#"><input type="submit" name="LoginControl$Button1" value="Log In"  id="LoginControl_Button1" class="epi-button-child-item" /></a>
+						 
+						</li>
+						
+						<li>
+						
+							<p class="text--small">
+							
+								<a href="#" onclick="toggleCookieText(); return false;">If you log in, cookies will be used.</a>
+							</p>
+							
+							<div id="cookieInfoPanel" class="cookie-information">
+							
+								<p class="text--small">
+								
+									A cookie containing login information will be sent to your web browser. If you do not want to receive cookies, you will be unable to log into the website.
+									
+								</p>
+								
+							</div>
+							
+						</li>
+						
+					</ol>
+					
+				</div>			  
+
+			</div>
+			
+		<!--*****  Login Window Coding End  *****-->
+			<script src="js/classie.js"></script>
+			<script src="js/modalEffects.js"></script>
+			<script>
+				// this is important for IEs
+				var polyfilter_scriptpath = '/js/';
+			</script>
+			<script>
+				var classes = [' img1', ' img2', ' img3'];
+				document.getElementById("LoginControl").className += classes[Math.floor(Math.random() * classes.length)]
+
+				function toggleCookieText() {
+					document.getElementById("cookieInfoPanel").classList.toggle("is-visible");
+					return false;
+				}
+			</script>
+		
+		</body>
+</html>
