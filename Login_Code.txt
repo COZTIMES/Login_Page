@@ -13,7 +13,7 @@
 		
 		<meta name="Favicon" content="images/Favicon.png" size=16*16>
 		
-		<title>	Funbawarchi </title>
+		<title>	COZTIME </title>
 		
 		<!-- Common Css -->
 		<link href="CSS/login.css" type="text/css" rel="stylesheet"  />
@@ -321,7 +321,7 @@
 							
 							<input name="LoginControl$UserName" type="text" id="LoginControl_UserName" />
 							
-							<span id="LoginControl_RequiredFieldValidator1" style="display:none;">­</span>
+							<span id="LoginControl_RequiredFieldValidator1" style="display:none;">Â­</span>
 							
 						</li>
 						
@@ -330,7 +330,7 @@
 							
 							<input name="LoginControl$Password" type="password" id="LoginControl_Password" />
 							
-							<span id="LoginControl_RequiredFieldValidator2" style="display:none;">­</span>
+							<span id="LoginControl_RequiredFieldValidator2" style="display:none;">Â­</span>
 							
 						</li>
 						
