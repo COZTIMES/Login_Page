@@ -48,7 +48,7 @@
 
 			<div class="top-bar_login animated fadeInDown  animation-delay-100 " style="text-color:white">
 
-				 <a data-reveal-id="thirdModal"><img class="fadeInDown" src="images/create_icon.png" style="height:17px; width:17px;" />CREATEACCOUNT</a>
+				 <a data-reveal-id="thirdModal"><img class="fadeInDown" src="images/create_icon.png" style="height:17px; width:17px;" />CREATE ACCOUNT</a>
 
 			</div>
 
